@@ -7,8 +7,8 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
 <style>
 body,h1,h2,h3,h4,h5 {font-family: "Ubuntu", sans-serif}
-.w3-third img{margin-bottom: -6px; opacity: 0.8; cursor: pointer}
-.w3-third img:hover{opacity: 1}
+.w3-card-4 img{margin-bottom: -6px; opacity: 0.8; cursor: pointer}
+.w3-card-4 img:hover{opacity: 1}
 figure {
   	display: table;
   	text-align: center;
@@ -62,9 +62,18 @@ figcaption {
   <div class="w3-hide-large" style="margin-top:83px"></div>
   
   <!-- Photo grid -->
-  <div class="w3-row">
+  <div class="w3-container">
+  <div class="w3-card-4" style="width:25%">
+  <div class="w3-container w3-center">
+      <p>42 (42)</p>
+    </div>
+    <img src="http://www.apt-get.co/docs/assets/crypto-icons/42.png" alt="42 (42)" style="width:100%">
+  </div>
+</div>
+
+  <div class="w3-container">
     <div class="w3-third">
-      <figure><img id="42" title="42 (42)" src="http://www.apt-get.co/docs/assets/crypto-icons/42.png" style="width:100%" onclick="onClick(this)" alt="42 (42)"><figcaption>42 (42)</figcaption></figure>
+      <img class="w3-image" id="42" title="42 (42)" src="http://www.apt-get.co/docs/assets/crypto-icons/42.png" style="width:100%" onclick="onClick(this)" alt="42 (42)">
       <img src="http://www.apt-get.co/docs/assets/crypto-icons/365.png" style="width:50%" onclick="onClick(this)" alt="What a beautiful scenery this sunset">
       <img src="/w3images/girl.jpg" style="width:100%" onclick="onClick(this)" alt="The Beach. Me. Alone. Beautiful">
     </div>
@@ -247,7 +256,6 @@ function w3_close() {
     document.getElementById("mySidebar").style.display = "none";
     document.getElementById("myOverlay").style.display = "none";
 }
-
 // Modal Image Gallery
 function onClick(element) {
   document.getElementById("img01").src = element.src;
@@ -255,7 +263,6 @@ function onClick(element) {
   var captionText = document.getElementById("caption");
   captionText.innerHTML = element.alt;
 }
-
 </script>
 
 
